@@ -1,5 +1,5 @@
 # vagrant-aws-helper
-Helper for setting up AWS EC2 instances with vagrant
+Helper for setting up AWS EC2 instances with vagrant using vagrant-aws, see https://github.com/mitchellh/vagrant-aws.
 
 # Prerequisites
 

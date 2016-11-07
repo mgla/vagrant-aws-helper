@@ -3,6 +3,14 @@
 # Require the AWS provider plugin
 require 'vagrant-aws'
 
+# OS detection to run windows configuration.
+module OS
+    def OS.windows?
+        (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+    end
+end
+
+
 # Create and configure the AWS instance(s)
 Vagrant.configure('2') do |config|
 
@@ -26,6 +34,9 @@ Vagrant.configure('2') do |config|
     # Specify username and private key path
     override.ssh.username = 'ec2-user'
     override.ssh.private_key_path = ENV['AWS_PRIV_KEY_PATH']
+    if OS.windows?
+      override.vm.synced_folder '.', '/vagrant', disabled: true
+    end
 
     # Instance configuration
     aws.instance_type = 't2.micro'

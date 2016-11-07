@@ -6,11 +6,12 @@ Helper for setting up AWS EC2 instances with vagrant using vagrant-aws, see http
 * Install vagrant, for details see https://www.vagrantup.com.
 * Install `vagrant-aws`: 
 
-```bash
- vagrant plugin install vagrant-aws
+```shell
+vagrant plugin install vagrant-aws
 ```
 
 ## Extra steps for Windows
+Support for Windows is a bit limited. No synced file systems possible.
 
 Install git bash, see https://git-scm.com/downloads.
 
@@ -24,3 +25,9 @@ On Windows you need to install rsync locally. To do that, follow these steps:
   * msys-iconv-2.dll
   * msys-intl-8.dll
   * msys-popt-0.dll
+
+You need to run vagrant up as
+
+```shell
+vagrant up --no-provision
+```

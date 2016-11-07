@@ -28,8 +28,8 @@ Vagrant.configure('2') do |config|
 
     # Specify region, AMI ID, and security group(s)
     aws.region = 'eu-west-1'
-    aws.ami = 'ami-9398d3e0'
-    aws.security_groups = ['default']
+    aws.ami    = 'ami-9398d3e0'
+    aws.security_groups = ['vagrant']
 
     # Specify username and private key path
     override.ssh.username = 'ec2-user'

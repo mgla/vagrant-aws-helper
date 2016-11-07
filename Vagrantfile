@@ -34,6 +34,7 @@ Vagrant.configure('2') do |config|
     ## Overrides to vagrant configuration
     # Specify username and private key path
     override.ssh.username = 'ec2-user'
+    # Override vagrant default SSH key, since it is most likely not added to your AWS account.
     override.ssh.private_key_path = ENV['AWS_PRIV_KEY_PATH']
     # No syncing on windows.
     if OS.windows?

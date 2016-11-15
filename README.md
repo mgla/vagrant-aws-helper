@@ -14,7 +14,7 @@ vagrant plugin install vagrant-aws
 
 
 ## Extra steps for Windows
-Support for Windows is a bit limited. No synced file systems possible.
+Support for Windows is a bit limited. No synced file systems possible, because your stuff runs in the cloud, not on your computer.
 
 Install git bash, see https://git-scm.com/downloads.
 

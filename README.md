@@ -10,6 +10,7 @@ Helper for setting up AWS EC2 instances with vagrant using vagrant-aws, see http
 vagrant plugin install vagrant-aws
 ```
 * Add your AWS credentials to `~/.aws/aws.credentials`, see [this example file](../master/examples/aws.credentials).
+ * On Windows, use `mkdir ~/.aws` from your command prompt to create the `.aws` directory.
 
 
 ## Extra steps for Windows

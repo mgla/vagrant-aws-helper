@@ -9,6 +9,8 @@ Helper for setting up AWS EC2 instances with vagrant using vagrant-aws, see http
 ```shell
 vagrant plugin install vagrant-aws
 ```
+* Add your AWS credentials to `~/.aws/aws.credentials`, see [this example file](../master/examples/aws.credentials).
+
 
 ## Extra steps for Windows
 Support for Windows is a bit limited. No synced file systems possible.
